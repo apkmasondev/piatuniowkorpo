@@ -576,17 +576,21 @@
       }
 
       .features-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
         width: 100%;
+        max-width: 100%;
         gap: var(--space-md);
       }
 
       .feature-card {
         width: 100%;
         max-width: 100%;
+        min-width: 0;
         box-sizing: border-box;
         overflow-wrap: break-word;
         word-wrap: break-word;
+        word-break: break-word;
+        hyphens: auto;
       }
 
       .cta-container {
@@ -620,7 +624,10 @@
       }
 
       section {
-        padding: var(--space-lg) var(--space-md);
+        padding: var(--space-lg) var(--space-sm);
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
       }
     }
   </style>
